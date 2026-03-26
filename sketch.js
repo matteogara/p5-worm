@@ -4,7 +4,7 @@ let AMPLITUDE = 150;
 let time = 0;
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   
   noStroke();
 }
