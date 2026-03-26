@@ -1,5 +1,6 @@
 let SIZE = 150;
 let NUMBER_OF_CIRCLES = 200;
+let AMPLITUDE = 150;
 
 function setup() {
   createCanvas(800, 800);
@@ -12,8 +13,10 @@ function setup() {
     // Operazioni
     let progress = count / NUMBER_OF_CIRCLES; // Valore normalizzato (0 - 1)
     
-    let x = width * progress;
-    let y = height / 2;
+    
+    let centralX = width / 2;
+    let x = sin(progress * 10) * AMPLITUDE + centralX;
+    let y = height * progress;
     circle(x, y, SIZE);
   }
 }
